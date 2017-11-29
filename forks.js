@@ -24,4 +24,7 @@ var toFork = ['http://2.bp.blogspot.com/_NpINLHeo8rM/TLcz-gU2mbI/AAAAAAAA2N8/ILZ
   'https://lh6.googleusercontent.com/-tPm2WTdaOIQ/Te9gLwk3vGI/AAAAAAAADRQ/1QnI8slVhVE/s800/creative-kitchen-gadgets-fork-2.jpg',
   'http://static.neatorama.com/images/2006-01/fork-art.jpg' ];
 
-  var forkLength = toFork.length;
+exports.largeArrayFunction = function() {
+     //do stuff
+     return toFork;
+}
