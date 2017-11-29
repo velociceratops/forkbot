@@ -1,8 +1,3 @@
-var Discord = require('discord.io');
-var logger = require('winston');
-var auth = require('./auth.json');
-
-
 var toFork = ['http://2.bp.blogspot.com/_NpINLHeo8rM/TLcz-gU2mbI/AAAAAAAA2N8/ILZZd9L-CRw/s1600/11.jpg',
   'https://shechive.files.wordpress.com/2010/05/cool-forks-6.jpg?quality=100&strip=info&w=500',
   'http://media.techeblog.com/images/cool_fork_2.jpg',
@@ -30,41 +25,3 @@ var toFork = ['http://2.bp.blogspot.com/_NpINLHeo8rM/TLcz-gU2mbI/AAAAAAAA2N8/ILZ
   'http://static.neatorama.com/images/2006-01/fork-art.jpg' ];
 
   var forkLength = toFork.length;
-
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(logger.transports.Console, {
-    colorize: true
-});
-logger.level = 'debug';
-// Initialize Discord Bot
-var bot = new Discord.Client({
-   token: auth.token,
-   autorun: true
-});
-bot.on('ready', function (evt) {
-    logger.info('Connected');
-    logger.info('Logged in as: ');
-    logger.info(bot.username + ' - (' + bot.id + ')');
-});
-bot.on('message', function (user, userID, channelID, message, evt) {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
-    if (message.substring(0, 1) == '!') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-
-        args = args.splice(1);
-        switch(cmd) {
-            // !ping
-            case 'ping':
-              var fork = toFork[ (Math.floor(Math.random() * forkLength)) ];
-              bot.sendMessage({
-                  to: channelID,
-                  message: fork
-              });
-            break;
-            // Just add any case commands if you want to..
-         }
-     }
-});
