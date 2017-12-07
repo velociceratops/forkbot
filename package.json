@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "I post Forks!",
   "main": "bot.js",
+<<<<<<< HEAD
   "author": "Your Lovely Mother, Jocelyn!",
   "dependencies": {
     "discord.io": "^2.5.3",
     "winston": "^2.4.0"
   }
+=======
+  "author": "Your Lovely Mother, Jocelyn! but also your new god, isabelle",
+  "dependencies": {}
+>>>>>>> 82db378f89cfabc6ab8e85dac4940a4eb928b606
 }
