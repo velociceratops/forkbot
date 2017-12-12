@@ -30,7 +30,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
 
         args = args.splice(1);
         switch(cmd) {
-            // !ping
             case 'fork':
               var fork = theForks[ (Math.floor(Math.random() * theForks.length)) ];
               bot.sendMessage({
