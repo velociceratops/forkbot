@@ -1,16 +1,26 @@
 {
-  "name": "Forkbot",
+  "name": "package",
   "version": "1.0.0",
-  "description": "I post Forks!",
+  "description": "",
   "main": "bot.js",
-<<<<<<< HEAD
-  "author": "Your Lovely Mother, Jocelyn!",
   "dependencies": {
     "discord.io": "^2.5.3",
+    "discord.js": "^11.2.1",
+    "nodemon": "^1.12.5",
     "winston": "^2.4.0"
-  }
-=======
-  "author": "Your Lovely Mother, Jocelyn! but also your new god, isabelle",
-  "dependencies": {}
->>>>>>> 82db378f89cfabc6ab8e85dac4940a4eb928b606
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/velociceratops/forkbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/velociceratops/forkbot/issues"
+  },
+  "homepage": "https://github.com/velociceratops/forkbot#readme"
 }
